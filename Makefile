@@ -6,7 +6,7 @@
 #    By: eviala <eviala@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/05 11:41:47 by eviala            #+#    #+#              #
-#    Updated: 2024/07/06 09:43:19 by eviala           ###   ########.fr        #
+#    Updated: 2024/07/06 10:17:41 by eviala           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -141,28 +141,6 @@ fclean: clean
 re: fclean
 	$(MAKE) all
 
-.PHONY: all clean fclean re bonus test
-
-# # Test 100
-# test_100:
-# 	@echo "Running 100 tests..."
-# 	@TOTAL_MOVES=0; \
-# 	TOTAL_TESTS=1000; \
-# 	for i in $$(seq 1 $$TOTAL_TESTS); do \
-# 	    NUMBERS=$$(shuf -i 1-1000 -n 100 | tr '\n' ' '); \
-# 	    ARG="$$NUMBERS"; \
-# 	    RESULT=$$(./$(NAME) $$ARG | ./$(BONUS_NAME) $$ARG); \
-# 	    if [ "$$RESULT" != "OK" ]; then \
-# 	        echo "Erreur: Le tri n'a pas réussi pour le test $$i"; \
-# 	        continue; \
-# 	    fi; \
-# 	    MOVES=$$(./$(NAME) $$ARG | wc -l); \
-# 	    TOTAL_MOVES=$$((TOTAL_MOVES + MOVES)); \
-# 	    echo "Test $$i: $$MOVES coups"; \
-# 	done; \
-# 	AVERAGE=$$((TOTAL_MOVES / TOTAL_TESTS)); \
-# 	echo "Moyenne sur $$TOTAL_TESTS tests: $$AVERAGE coups"
-
 test:
 	@echo "$(GREEN)$(BOLD)Running tests..."
 	@if [ -z "$(ELT)" ]; then echo "$(RED)Error: Please provide the number of elements to sort (e.g., make test ELT=100 REP=1000)"; exit 1; fi
@@ -182,6 +160,9 @@ test:
 	done; \
 	AVERAGE=$$((TOTAL_MOVES / $(REP))); \
 	echo "Moyenne sur $(CYAN)$(BOLD)$(REP)$(RESET) tests avec $(CYAN)$(BOLD)$(ELT)$(RESET) éléments: $(RED)$(BOLD)$$AVERAGE$(RESET) coups"
+
+
+.PHONY: all clean fclean re bonus test
 
 # ... (le reste du Makefile reste inchangé)
 .SILENT:

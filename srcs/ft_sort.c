@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 11:21:45 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/05 14:14:17 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/05 12:45:09 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ void	quick_b(t_stack **stack_a, t_stack **stack_b, t_opt_sort *opsort)
 	int	now_flag;
 
 	now_flag = (*stack_a)->flag;
-	ft_printf("now_flag = %d\n", now_flag);
 	if ((*stack_a)->flag != 0)
 	{
 		while ((*stack_a)->flag == now_flag)
