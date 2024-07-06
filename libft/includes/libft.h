@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 14:51:45 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/05 11:36:45 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/06 11:37:44 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 # include <stdint.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
 
@@ -63,6 +62,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 char	*ft_itoa(int n);
+char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strjoin_free(char *s1, char *s2);

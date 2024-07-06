@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 11:40:50 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/05 12:45:24 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/06 11:40:45 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	lexer(char *input, t_stack **stack_a, t_stack **stack_b)
 	return (free(input), 1);
 }
 
-void	input(t_stack **stack_a, t_stack **stack_b)
+int	input(t_stack **stack_a, t_stack **stack_b)
 {
 	char	*input;
 
@@ -51,10 +51,11 @@ void	input(t_stack **stack_a, t_stack **stack_b)
 		if (!lexer(input, stack_a, stack_b))
 		{
 			ft_putstr_fd("Error\n", 1);
-			exit(-1);
+			return (0);
 		}
 		input = get_next_line(0);
 	}
+	return (1);
 }
 
 int	its_sort(t_stack *stack)
@@ -83,11 +84,13 @@ int	main(int ac, char **av)
 	if (!checks(av))
 		return (ft_free_all(av, &stack_a, &stack_b), ft_error());
 	ft_fill_stack(&stack_a, av);
-	input(&stack_a, &stack_b);
-	if (its_sort(stack_a) && !stack_b)
-		ft_printf("OK\n");
-	else
-		ft_printf("KO\n");
+	if (input(&stack_a, &stack_b))
+	{
+		if (its_sort(stack_a) && !stack_b)
+			ft_printf("OK\n");
+		else
+			ft_printf("KO\n");
+	}
 	ft_free_all(av, &stack_a, &stack_b);
 	return (0);
 }

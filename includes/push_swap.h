@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 13:04:53 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/04 13:32:27 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/06 11:34:14 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include "ft_printf.h"
 # include "libft.h"
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 # include <limits.h>
 

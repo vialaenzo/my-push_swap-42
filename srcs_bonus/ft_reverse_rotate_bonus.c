@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 13:39:25 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/06 10:16:54 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/06 11:38:49 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	reverse_rotate(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*last;
 
-	if (!*stack || ft_stsize(*stack) < 2)
+	if ((!*stack) || (ft_stsize(*stack) < 2))
 		return ;
 	tmp = *stack;
 	last = ft_stlast(*stack);

@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 10:51:06 by eviala            #+#    #+#             */
-/*   Updated: 2024/06/25 10:03:00 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/06 11:34:48 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ char	*join_with_space(const char *s1, const char *s2)
 	result = (char *)malloc(len1 + len2 + 2);
 	if (!result)
 		return (NULL);
-	strcpy(result, s1);
+	ft_strcpy(result, s1);
 	result[len1] = ' ';
-	strcpy(result + len1 + 1, s2);
+	ft_strcpy(result + len1 + 1, s2);
 	return (result);
 }
 
@@ -44,7 +44,7 @@ char	**full_split(int ac, char **av)
 
 	if (ac < 2)
 		return (NULL);
-	tmp = strdup(av[1]);
+	tmp = ft_strdup(av[1]);
 	if (!tmp)
 		return (NULL);
 	i = 2;
