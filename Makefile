@@ -6,7 +6,7 @@
 #    By: eviala <eviala@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/05 11:41:47 by eviala            #+#    #+#              #
-#    Updated: 2024/07/06 11:56:35 by eviala           ###   ########.fr        #
+#    Updated: 2024/07/07 09:59:09 by eviala           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ $(FT_PRINTF):
 	@echo "\n"
 
 # Compilation de la bibliothèque
+
 $(NAME): $(LIBFT) $(FT_PRINTF) $(OBJS) $(OBJS_COMMON)
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(OBJS_COMMON) $(HEADER) $(LIBFT) $(FT_PRINTF)
 	@echo "\n┗▷${BOLD}$(GREEN)『./$(NAME) Successfully created [✅]$(RESET)"
