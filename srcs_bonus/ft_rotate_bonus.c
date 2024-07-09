@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:39:14 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/05 11:16:36 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/09 15:18:16 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static void	rotate(t_stack **stack)
 {
+	if ((ft_stsize(*stack) < 2) || !(*stack))
+		return ;
 	ft_stadd_back(stack, ft_stnew((*stack)->content, (*stack)->index));
 	ft_stlast(*stack)->flag = (*stack)->flag;
 	ft_stremove_front(stack);
