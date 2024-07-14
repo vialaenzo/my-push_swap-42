@@ -63,6 +63,8 @@ int	check_duplicate(char **str)
 
 int	checks(char **str)
 {
+	if (!str || !str[0])
+		return (0);
 	if (!check_isdigit(str) || !check_duplicate(str))
 		return (0);
 	return (1);
