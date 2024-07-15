@@ -6,7 +6,7 @@
 /*   By: eviala <eviala@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 10:17:31 by eviala            #+#    #+#             */
-/*   Updated: 2024/07/11 14:47:00 by eviala           ###   ########.fr       */
+/*   Updated: 2024/07/15 11:36:56 by eviala           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,9 @@ void	ft_sort_5nbr(t_stack **stack_a, t_stack **stack_b)
 	while (ft_stsize(*stack_a) > 3)
 	{
 		if ((*stack_a)->index == 0 || (*stack_a)->index == 1)
-		{
 			ft_push("pb", stack_a, stack_b);
-		}
 		else
-		{
 			ft_rotate("ra", stack_a, NULL);
-		}
 	}
 	ft_sort_three(stack_a);
 	while (*stack_b)
@@ -64,4 +60,3 @@ void	ft_sort_5nbr(t_stack **stack_a, t_stack **stack_b)
 			ft_swap("sa", stack_a, NULL);
 	}
 }
-
